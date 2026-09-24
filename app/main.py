@@ -1,5 +1,7 @@
 from fastapi import FastAPI
 
+from app.routers import stocks
+
 app = FastAPI()
 
-print(f"Server running  ")
+app.include_router(stocks.router)
